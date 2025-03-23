@@ -145,7 +145,7 @@ The library includes a SQL parser that supports:
 
 ## Requirements
 
-- .NET 7.0 or later
+- .NET 9.0 or later
 - Dependencies:
   - Parquet.Net (for Parquet file handling)
   - Microsoft.SqlServer.TransactSql.ScriptDom (for SQL parsing)
