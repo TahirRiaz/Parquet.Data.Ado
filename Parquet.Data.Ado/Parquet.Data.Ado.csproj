@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- netstandard2.1;net6.0;net7.0;net8.0, --> 
+  <PropertyGroup>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>Parquet.Data.Ado</RootNamespace>
+    <AssemblyName>Parquet.Data.Ado</AssemblyName>
+
+    <!-- Package Info -->
+    <Version>1.0.0</Version>
+    <Authors>Tahir Riaz</Authors>
+    <Company>Business IQ</Company>
+    <Product>Parquet.Data.Reader</Product>
+    <Description>
+      A high-performance ADO.NET provider for Parquet files enabling seamless integration with .NET applications.
+      Implements standard DbConnection/DbCommand/DbDataReader patterns for working with Parquet data through familiar
+      ADO.NET abstractions. Features include SQL query support with filtering and projection, parallel reading of row groups,
+      virtual column support, batch processing capabilities, and full async/await compatibility. Ideal for data analytics,
+      ETL operations, and big data processing within the .NET ecosystem.
+    </Description>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year)</Copyright>
+    <PackageId>Parquet.Data.Reader</PackageId>
+    <PackageTags>parquet;ado.net;data;database;reader;dbprovider;datafile;analytics;bigdata</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/TahirRiaz/Parquet.Data.Ado</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TahirRiaz/Parquet.Data.Ado</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>Parquet.Data.Ado.png</PackageIcon>
+
+    <!-- SourceLink -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <!-- Build -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>All</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ApplicationIcon>Parquet.Data.Ado.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!-- Deterministic builds in CI -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Parquet.Data.Ado.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Core dependencies -->
+    <PackageReference Include="Microsoft.SqlServer.TransactSql.ScriptDom" Version="170.28.0" />
+    <PackageReference Include="Parquet.Net" Version="5.1.1" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Development dependencies -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="9.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- .NET Framework specific references -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462' Or '$(TargetFramework)' == 'net472' Or '$(TargetFramework)' == 'net48'">
+    <Reference Include="System.Data" />
+  </ItemGroup>
+
+  <!-- Conditionally include trimming attributes on .NET 6+ -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0' Or '$(TargetFramework)' == 'net7.0' Or '$(TargetFramework)' == 'net8.0'">
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+</Project>
