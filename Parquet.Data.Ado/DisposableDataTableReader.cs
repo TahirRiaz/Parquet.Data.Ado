@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Wrapper class that ensures both the DataTableReader and its parent DataTable

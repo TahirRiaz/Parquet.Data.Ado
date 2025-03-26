@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Parquet;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Factory class for creating ParquetDataReader instances.

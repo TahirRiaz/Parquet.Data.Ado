@@ -11,7 +11,7 @@ using Parquet.Schema;
 using DataColumn = System.Data.DataColumn; // Explicitly use System.Data.DataColumn
 using ParquetDataColumn = Parquet.Data.DataColumn; // Alias for Parquet.Data.DataColumn
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Extension methods for working with Parquet data.

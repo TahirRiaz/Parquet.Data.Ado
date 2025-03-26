@@ -13,7 +13,7 @@ using Parquet;
 using Parquet.Data;
 using Parquet.Schema;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Represents a reader that provides fast, non-cached, forward-only access to Parquet data.

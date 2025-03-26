@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using Parquet;
 using Parquet.Schema;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Represents a data reader for Parquet data with support for virtual columns.
     /// Extends the standard <see cref="ParquetDataReader"/> with additional capabilities for columns
     /// that don't physically exist in the Parquet file.
     /// </summary>
-    public class ParquetDataReaderWithVirtualColumns : ParquetDataReader
+    public class ParquetDataReaderWithVirtualColumns : ParquetDataReader, IDataReader
     {
         private readonly SortedList<int, VirtualColumn> _virtualColumns;
         private readonly int _physicalFieldCount;

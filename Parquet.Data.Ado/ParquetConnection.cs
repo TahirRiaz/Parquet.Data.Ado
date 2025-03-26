@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Parquet;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Represents a connection to a Parquet data source.

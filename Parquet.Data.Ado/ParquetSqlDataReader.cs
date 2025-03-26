@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Parquet;
 using Parquet.Data;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// A specialized ParquetDataReader that applies SQL filtering and projection.

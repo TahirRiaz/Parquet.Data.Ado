@@ -8,7 +8,7 @@ using Parquet;
 using Parquet.Data;
 using Parquet.Schema;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Provides functionality to execute SQL SELECT queries against Parquet files.

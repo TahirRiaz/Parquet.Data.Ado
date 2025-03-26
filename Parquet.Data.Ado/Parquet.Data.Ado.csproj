@@ -13,7 +13,7 @@
     <Version>1.1.0</Version>
     <Authors>Tahir Riaz</Authors>
     <Company>Business IQ</Company>
-    <Product>Parquet.Data.Reader</Product>
+    <Product>Parquet.Data.Ado</Product>
     <Description>
       A high-performance ADO.NET provider for Parquet files enabling seamless integration with .NET applications.
       Implements standard DbConnection/DbCommand/DbDataReader patterns for working with Parquet data through familiar
@@ -22,7 +22,7 @@
       ETL operations, and big data processing within the .NET ecosystem.
     </Description>
     <Copyright>Copyright © $([System.DateTime]::Now.Year)</Copyright>
-    <PackageId>Parquet.Data.Reader</PackageId>
+    <PackageId>Parquet.Data.Ado</PackageId>
     <PackageTags>parquet;ado.net;data;database;reader;dbprovider;datafile;analytics;bigdata</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/TahirRiaz/Parquet.Data.Ado</PackageProjectUrl>

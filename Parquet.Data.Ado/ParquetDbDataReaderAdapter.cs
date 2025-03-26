@@ -6,7 +6,7 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Adapter class that wraps a ParquetDataReader and exposes it as a DbDataReader.

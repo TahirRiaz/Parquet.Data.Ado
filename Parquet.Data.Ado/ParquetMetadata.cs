@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Parquet;
 using Parquet.Schema;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Represents metadata information for a Parquet file.

@@ -93,7 +93,7 @@ ParquetMetadata metadata = await ParquetMetadata.FromFileAsync("data.parquet", c
 ### Example 1: Quick File Inspection
 
 ```csharp
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 
 public void InspectParquetFile(string filePath)
 {
@@ -114,7 +114,7 @@ public void InspectParquetFile(string filePath)
 ### Example 2: Analyzing Row Group Distribution
 
 ```csharp
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 
 public void AnalyzeRowGroups(string filePath)
 {
@@ -142,7 +142,7 @@ public void AnalyzeRowGroups(string filePath)
 ### Example 3: Integration with Data Loading
 
 ```csharp
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 using System.Data;
 
 public async Task OptimizedDataLoading(string filePath)

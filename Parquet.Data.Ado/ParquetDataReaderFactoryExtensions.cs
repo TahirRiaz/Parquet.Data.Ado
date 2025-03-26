@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Parquet;
 using System.IO;
 
-namespace Parquet.Data.Reader
+namespace Parquet.Data.Ado
 {
     /// <summary>
     /// Extension methods for the ParquetDataReaderFactory to support creating readers with virtual columns.
