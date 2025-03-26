@@ -181,5 +181,31 @@ namespace Parquet.Data.Reader
 
             return result;
         }
+
+        /// <summary>
+        /// Gets metadata from an existing ParquetDataReader instance.
+        /// </summary>
+        /// <param name="reader">The ParquetDataReader instance.</param>
+        /// <returns>A ParquetMetadata object containing information about the Parquet data.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when reader is null.</exception>
+        /// <exception cref="ObjectDisposedException">Thrown when the reader is disposed.</exception>
+        public static ParquetMetadata GetMetadata(this ParquetDataReader reader)
+        {
+            ArgumentNullException.ThrowIfNull(reader,nameof(reader));
+            reader.ThrowIfDisposed();
+
+            // Access the private _reader field through reflection to get the underlying ParquetReader
+            var readerField = typeof(ParquetDataReader).GetField("_reader",
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+            if (readerField == null)
+                throw new InvalidOperationException("Could not access internal reader field");
+
+            var parquetReader = readerField.GetValue(reader) as ParquetReader;
+            if (parquetReader == null)
+                throw new InvalidOperationException("Could not access internal ParquetReader");
+
+            return new ParquetMetadata(parquetReader);
+        }
     }
 }

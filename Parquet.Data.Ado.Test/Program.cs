@@ -26,19 +26,21 @@ namespace ParquetReaderTest
                 Console.WriteLine($"Test file path: {testFilePath}");
 
                 // Run the tests
-                //await RunBasicIOTests(sampleData, testFilePath);
-                //await RunConnectionTests(testFilePath);
-                //await RunBatchReaderTests(testFilePath);
-                //await RunEdgeCaseTests(testFilePath);
-                //await RunPerformanceTests(testFilePath);
+                await RunBasicIOTests(sampleData, testFilePath);
+                await RunConnectionTests(testFilePath);
+                await RunBatchReaderTests(testFilePath);
+                await RunEdgeCaseTests(testFilePath);
+                await RunPerformanceTests(testFilePath);
 
                 //// Run the new large file and streaming tests
-                //await LargeFileTests.RunAllTests();
-                await ParquetStreamingTests.RunAllTests();
+                await LargeFileTests.RunAllTests();
+                //await ParquetStreamingTests.RunAllTests();
 
                 await ParquetSqlQueryTests.RunAllTests();
-
                 await ParquetVirtualColumnTests.RunAllTests();
+
+                await ParquetMetadataTests.RunAllTests();
+
 
                 // Clean up
                 if (File.Exists(testFilePath))

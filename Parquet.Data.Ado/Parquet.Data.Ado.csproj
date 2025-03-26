@@ -10,7 +10,7 @@
     <AssemblyName>Parquet.Data.Ado</AssemblyName>
 
     <!-- Package Info -->
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Tahir Riaz</Authors>
     <Company>Business IQ</Company>
     <Product>Parquet.Data.Reader</Product>

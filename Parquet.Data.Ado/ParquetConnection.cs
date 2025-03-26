@@ -311,16 +311,18 @@ namespace Parquet.Data.Reader
         /// <summary>
         /// Gets the ParquetReader associated with this connection.
         /// </summary>
-        /// <returns>The ParquetReader instance.</returns>
-        /// <exception cref="InvalidOperationException">Thrown when the connection is not open.</exception>
-        internal ParquetReader GetReader()
+        /// <exception cref="InvalidOperationException">Thrown when the connection is not open or the reader is not initialized.</exception>
+        public ParquetReader Reader
         {
-            if (_state != ConnectionState.Open)
+            get
             {
-                throw new InvalidOperationException("Connection is not open");
-            }
+                if (_state != ConnectionState.Open)
+                {
+                    throw new InvalidOperationException("Connection is not open");
+                }
 
-            return _reader ?? throw new InvalidOperationException("Parquet reader is not initialized");
+                return _reader ?? throw new InvalidOperationException("Parquet reader is not initialized");
+            }
         }
 
         /// <summary>
@@ -531,7 +533,7 @@ namespace Parquet.Data.Reader
                 throw new InvalidOperationException("Connection is not open");
             }
 
-            var reader = _connection.GetReader();
+            var reader = _connection.Reader;
             bool readNextGroup = (behavior & CommandBehavior.SingleResult) != CommandBehavior.SingleResult;
 
             var parquetReader = new ParquetDataReader(reader, 0, readNextGroup);
