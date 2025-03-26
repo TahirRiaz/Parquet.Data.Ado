@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 
 namespace ParquetReaderTest
 {
@@ -13,7 +13,7 @@ namespace ParquetReaderTest
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Parquet.Data.Reader Test Application");
+            Console.WriteLine("Parquet.Data.Ado Test Application");
             Console.WriteLine("====================================");
 
             try

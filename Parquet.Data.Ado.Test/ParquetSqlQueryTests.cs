@@ -6,7 +6,7 @@ using System.Diagnostics;
 using Parquet.Schema;
 using Parquet;
 using Parquet.Data;
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 
 namespace ParquetReaderTest
 {

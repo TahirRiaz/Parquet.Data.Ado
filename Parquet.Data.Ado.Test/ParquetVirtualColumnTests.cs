@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 using Parquet.Schema;
 using Parquet;
 using Parquet.Data;

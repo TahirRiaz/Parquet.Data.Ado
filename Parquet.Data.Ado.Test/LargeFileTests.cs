@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Parquet.Data.Ado;
-using Parquet.Data.Reader;
+using Parquet.Data.Ado;
 
 namespace ParquetReaderTest
 {
