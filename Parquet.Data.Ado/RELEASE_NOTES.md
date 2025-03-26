@@ -1,7 +1,7 @@
-﻿# Parquet.Data.Ado v1.1.0 Release Notes
+﻿# Parquet.Data.Ado v1.1.1 Release Notes
 
 ## Overview
-I am excited to announce the release of version 1.1.0 of Parquet.Data.Ado, featuring enhanced metadata capabilities that provide deeper insights into your Parquet files without fully loading the data. This release builds on our core functionality while making it easier to inspect and understand your Parquet data structure.
+I am excited to announce the release of version 1.1.1 of Parquet.Data.Ado, featuring enhanced metadata capabilities that provide deeper insights into your Parquet files without fully loading the data. This release builds on our core functionality while making it easier to inspect and understand your Parquet data structure.
 
 ## New Features
 
@@ -200,13 +200,13 @@ None. This release is fully backward compatible with previous versions.
 Install via NuGet Package Manager:
 
 ```
-Install-Package Parquet.Data.Ado -Version 1.1.0
+Install-Package Parquet.Data.Ado -Version 1.1.1
 ```
 
 Or via .NET CLI:
 
 ```
-dotnet add package Parquet.Data.Ado --version 1.1.0
+dotnet add package Parquet.Data.Ado --version 1.1.1
 ```
 
 ## Feedback and Contributions
