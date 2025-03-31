@@ -7,10 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parquet.Data.Ado", "Parquet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parquet.Data.Ado.Test", "Parquet.Data.Ado.Test\Parquet.Data.Ado.Test.csproj", "{2B40E44F-5FE3-43F1-A2C2-CA9F4801813D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{61AAC115-FAE6-4F77-AB41-8904EC4E877C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{43DA60F7-DF1A-4139-BDF2-935712E27418}"
 	ProjectSection(SolutionItems) = preProject
-		Meida\Parquet.Data.Ado.ico = Meida\Parquet.Data.Ado.ico
-		Meida\Parquet.Data.Ado.jpg = Meida\Parquet.Data.Ado.jpg
+		Media\Parquet.Data.Ado.ico = Media\Parquet.Data.Ado.ico
+		Media\Parquet.Data.Ado.jpg = Media\Parquet.Data.Ado.jpg
+		Media\Parquet.Data.Ado.png = Media\Parquet.Data.Ado.png
 	EndProjectSection
 EndProject
 Global
